@@ -161,7 +161,7 @@
 
 <header class="header py-3 md:py-5 absolute w-full z-20" id="js-header">
   <div class="container flex items-center justify-between">
-    <a href="/" class="flex items-center gap-x-2 no-underline">
+    <a href="javascript:window.scrollTo({top:0,behavior:'smooth'})" class="flex items-center gap-x-2 no-underline">
       <span class="sr-only">Hélio Amado Consultores Associados</span>
       <span class="text-1xl font-bold leading-tight text-white" id="js-header-logo">
         Hélio Amado & Consultores Associados
@@ -170,9 +170,9 @@
 
     <nav class="lhs flex items-center" id="js-menu">
       <ul class="header__nav flex items-center gap-x-10 text-base tracking-tight">
-        <li><a href="/" class="header__link">Início</a></li>
-        <li><a href="#sobre nós" class="header__link">Sobre nós</a></li>
-        <li><a href="#nossos serviços" class="header__link">Nossos serviços</a></li>
+        <li><a href="javascript:window.scrollTo({top:0,behavior:'smooth'})" class="header__link">Início</a></li>
+        <li><a href="#sobre-nos" class="header__link">Sobre nós</a></li>
+        <li><a href="#nossos-servicos" class="header__link">Nossos serviços</a></li>
         <li><a href="#contato" class="header__link header__link--cta">Contato</a></li>
       </ul>
     </nav>
@@ -198,16 +198,19 @@
       </div>
       <div
         class="hero__container container w-screen h-screen flex items-end md:items-start lg:items-end md:pt-40 lg:pt-0 pb-10 md:pb-20">
-        <div class="hero__content lg:w-5/12 text-white text-center md:text-left relative z-10 js-hero-content">
-          <h1 class="big-title text-balance">Hélio Amado Consultores Associados<span></span></h1>
+        <div class="hero__content lg:w-5/12 text-white text-center relative z-10 js-hero-content">
+          <h1 class="big-title text-balance">
+            Hélio Amado<br>
+            <span class="ajuste-linha">Consultores Associados</span>
+          </h1>
           <p class="mt-5 md:mt-7 text-balance">Fomos criados para apoiar pequenas e médias empresas com soluções estratégicas acessíveis e humanizadas. </p>
           <div class="hero__buttons flex gap-x-2 justify-center md:justify-start mt-6 md:mt-8">
-            <a href="/contact-us/?inquiry=consulting-services " class="button button--white">Contate<i></i></a>
+            <a href="https://wa.me/5511995316375?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener" class="button button--white">Contate<i></i></a>
           </div>
         </div>
       </div>
     </section>
-      <section id="Sobre nós">
+      <section id="sobre-nos">
         <!-- conteúdo da seção -->
       </section>
     <section class="py-16 lg:py-24">
@@ -220,7 +223,10 @@
         </div>
       </div>
     </section>
-    <section id="nossos serviços">
+    <div class="container">
+      <hr class="bg-white w-full opacity-60 my-14">
+    </div>    
+    <section id="nossos-servicos">
         <!-- conteúdo da seção -->
       </section>
     <section class="py-16 lg:py-24">
@@ -504,38 +510,34 @@
 
   </main>
 
-  <footer class="footer bg-base text-white pt-16 pb-12 lg:pt-24 lg:pb-16 relative overflow-hidden">
+  <footer class="footer bg-base text-white pt-16 pb-12 lg:pt-24 lg:pb-16 relative overflow-hidden" id="contato">
     <div class="container flex flex-wrap justify-between relative z-10">
       <div class="w-full lg:w-2/5">
         <h2 class="section-title text-center lg:text-left">Entre em contato para uma conversa estratégica!</h2>
         <div class="md:flex md:justify-center lg:justify-start gap-x-4 mt-8 md:mt-10">
-          <a href="/contact-us" class="button button--white w-max mx-auto md:mx-0">Fale Conosco<i></i></a>
+          <a href="https://wa.me/5511995316375?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener" class="button button--white w-max mx-auto md:mx-0">Fale Conosco<i></i></a>
         </div>
       </div>
       <hr class="bg-white w-full opacity-60 my-14 lg:hidden">
       <div class="w-full lg:w-2/5 flex flex-wrap justify-between gap-y-10">
         <div class="lg:w-1/2">
-          <h3 class="text-lg opacity-60">Expertise</h3>
+          <h3 class="text-lg opacity-60">Entre em contato</h3>
           <ul class="space-y-3 mt-3">
             <li>
-              <a #servicos="/executive-search" class="text-lg text-white leading-snug">Consultoria Estratégica</a>
-            </li>
-          </ul>
-          <h3 class="text-lg opacity-60 mt-10">Legal</h3>
-          <ul class="space-y-3 mt-3">
-            <li>
-              <a href="/privacy-notice" target="_blank" class="text-lg text-white leading-snug">Política de Privacidade</a>
-            </li>
-            <li>
-              <a href="/terms-of-use" target="_blank" class="text-lg text-white leading-snug">Termos de Uso</a>
+              <a href="https://wa.me/5511995316375?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener" class="text-lg text-white leading-snug">(11) 99531-6375</a> <br>
+              <a href="https://www.linkedin.com/in/helioalvesamado/" target="_blank" class="text-lg text-white leading-snug">in/helioalvesamado</a> <br>
+              <a href="mailto:contato@helioamado.com.br" target="_blank" class="text-lg text-white leading-snug">contato@helioamado.com.br</a>
             </li>
           </ul>
         </div>
         <div class="lg:w-1/2">
-          <h3 class="text-lg opacity-60">Nossa história</h3>
+          <h3 class="text-lg opacity-60">Legal</h3>
           <ul class="space-y-3 mt-3 pl-1">
             <li>
-              <a href="/Sobre nós" class="text-lg text-white leading-snug">Sobre nós</a>
+              <a href="privacy-notice.html" target="_blank" class="text-lg text-white leading-snug">Política de Privacidade</a>
+            </li>
+            <li>
+              <a href="terms-of-use.html" target="_blank" class="text-lg text-white leading-snug">Termos de Uso</a>
             </li>
           </ul>
         </div>
@@ -543,7 +545,7 @@
     </div>
     <div class="container flex flex-wrap justify-between mt-16 lg:mt-10 relative z-10 mx-auto">
       <div class="footer__copyright w-full text-center mt-8">
-        <small class="block lg:w-1/2 text-base text-white opacity-60">© 2025 Hélio Amado Consultores Associados.</small>
+        <small class="block lg:w-1/2 text-base text-white opacity-60">© 2025 Hélio Amado Consultores Associados. Todos os direitos reservados. </small>
         </div>
     </div>
     <div class="footer__gradients">
@@ -552,8 +554,6 @@
       <div class="footer__gradient-3"></div>
       <div class="footer__gradient-4"></div>
     </div>
-
-
   </footer>
   <div id="js-search-modal" class="modal js-modal">
     <div class="modal__close js-modal-close"></div>

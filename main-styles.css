@@ -720,6 +720,22 @@ textarea {
   background-size: cover
 }
 
+@keyframes pulsate {
+  to {
+    box-shadow: inset 21px 2px 70.0749px #154adf;
+    filter: blur(180px);
+    transform: scale(1.2)
+  }
+}
+
+@keyframes pulsate2 {
+  to {
+    box-shadow: inset 21px 2px 70.0749px #ca9f6d;
+    filter: blur(120px);
+    transform: scale(1.05)
+  }
+}
+
 @keyframes pulse {
   0% {
     opacity: 0;
@@ -1746,7 +1762,7 @@ textarea {
 
 .hero__gradients .hero__gradient-1,
 .hero__gradients .hero__gradient-2 {
-  background: linear-gradient(180deg, #000000, rgba(44, 44, 44, 0));
+  background: linear-gradient(180deg, #222831, rgba(44, 44, 44, 0));
   filter: blur(37px);
   transform: rotate(-130deg)
 }
@@ -1766,7 +1782,7 @@ textarea {
 /*bola brilhante da tela inicial*/
 .hero__gradients .hero__gradient-3,
 .hero__gradients .hero__gradient-4 {
-  background: linear-gradient(180deg, #4d4c4c, hsla(0, 0%, 40%, 0));
+  background: linear-gradient(180deg, #b1b9d152, hsl(0, 0%, 9%));
   filter: blur(37px);
   transform: rotate(130deg);
   z-index: 1
@@ -2310,6 +2326,16 @@ textarea {
     left: -5%;
     width: 257px
   }
+}
+
+.cta.cta--team:after {
+  animation: pulsate2 4s ease-in-out infinite alternate;
+  background: linear-gradient(180deg, #ca9f6d, hsla(32, 47%, 61%, 0));
+  bottom: -25%;
+  height: 31.7vw;
+  right: -15%;
+  transform: rotate(130deg);
+  width: 32.5vw
 }
 
 @media screen and (max-width:767px) {
@@ -7656,4 +7682,35 @@ textarea {
     font-size: 1.5rem;
     line-height: 2rem
   }
+}
+
+.hero__content,
+.hero__content * {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.hero__container {
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ajuste-linha {
+  display: inline-block;
+  margin-left: -37px; /* ajuste conforme necessário, pode ser -8px, -24px, etc */
+}
+
+.button i {
+  display: none !important;
+}
+
+hr.bg-white {
+  border: none !important;
+  height: 1px !important;
+  background: #adabab !important;
+  opacity: 0.6 !important;
+  width: 100% !important;
+  margin-top: 3.5rem !important;
+  margin-bottom: 3.5rem !important;
 }
