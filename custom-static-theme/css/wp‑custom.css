@@ -1,0 +1,48 @@
+/* =================  AJUSTES FIXOS PARA O MENU  ================= */
+
+/* MOBILE --------------------------------------------------------*/
+@media (max-width:1024px){
+  /* ul em coluna e 100 % de largura */
+  .header>.container>.lhs>ul,
+  #js-menu .header__nav{
+    display:block !important;
+    width:100% !important;
+  }
+
+  /* zera recuo de TODOS os <li> … */
+  .header>.container>.lhs>ul>li{
+    padding-left:0 !important;
+  }
+
+  /* … e aplica o mesmo padding interno aos links */
+  .header>.container>.lhs>ul>li>a{
+    display:block;
+    padding:20px 0 20px 1rem !important;   /* 1 rem = 16 px */
+  }
+
+  /* remove o ‘padding‑left:25px’ herdado SÓ no último item  */
+  .header>.container>.lhs>ul>li:last-child{
+    padding-left:0 !important;
+  }
+  .header>.container>.lhs>ul>li:last-child>a{
+    padding-left:1rem !important;          /* fica igual aos demais */
+  }
+}
+
+/* DESKTOP -------------------------------------------------------*/
+@media (min-width:1025px){
+  .header>.container>.lhs>ul{
+    display:flex !important;
+    gap:2.5rem !important;                 /* mesmo espaçamento original */
+  }
+}
+
+/* Título “Consultores Associados” ------------------------------*/
+.big-title .ajuste-linha{display:inline-block}
+@media (min-width:1024px){
+  .big-title .ajuste-linha{margin-left:-40px}
+}
+
+/* Esconde pseudo‑setas que o tema injeta -----------------------*/
+.header>.container>.lhs>ul>li:not(.no-arrow)>a:after,
+.header>.container>.lhs>ul>li>a i{display:none !important}

@@ -1,0 +1,52 @@
+    /* Pre launch hot fixes */
+    form.newsletter {
+        display: none;
+      }
+  
+      .l-single__content p+p {
+        margin-top: 1.5em;
+      }
+  
+      .l-single__content li {
+        margin-top: 1.4em;
+      }
+  
+      .wp-block-group.cta-in-content__wrapper.is-layout-flow.wp-block-group-is-layout-flow {
+        margin-top: 30px;
+      }
+  
+      .wp-block-buttons .wp-element-button,
+      .wp-block-buttons .wp-block-button__link {
+        display: block;
+        margin-top: 25px;
+      }
+  
+      .wp-block-buttons .wp-element-button,
+      .wp-block-buttons .wp-block-button__link {
+        background-color: var(--color-base);
+        color: #fff;
+        border-radius: 1.5rem;
+        font-size: 1rem;
+        padding: .875rem 1.5rem;
+        line-height: 1.3;
+        display: block;
+        transition-duration: .3s;
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+      }
+  
+      .wp-block-buttons .wp-element-button:hover,
+      .wp-block-buttons .wp-block-button__link:hover,
+      .wp-block-buttons .wp-element-button:focus,
+      .wp-block-buttons .wp-block-button__link:focus {
+        background-color: var(--color-primary);
+      }
+  
+  
+      .list-style-disc {
+        list-style-type: disc;
+      }
+  
+      .list-style-disc br {
+        display: none;
+      }

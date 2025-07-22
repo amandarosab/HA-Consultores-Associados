@@ -1,6 +1,6 @@
+<?php /* Template Name: Front Page */ ?>
 <!DOCTYPE html>
-<html class="no-js" lang="en-US">
-
+<html <?php language_attributes(); ?>>
 <head>
   <meta charset="UTF-8">
   <meta property="og:type" content="website" />
@@ -12,8 +12,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="fonts.css">
   <meta name="google-site-verification" content="1tTGLxnMpqPeR3UrMsevti0OeCHmph1_ICEwmEtIaWY" />
-
-  <link rel="stylesheet" href="main-styles.css">
 
   <title>Hélio Amado Consultores Associados</title>
 
@@ -152,10 +150,11 @@
   .footer a:hover{text-decoration:underline;}
 </style>
 
-
+<!-- Let WP print all your enqueued styles & scripts -->
+<?php wp_head(); ?>
 </head>
-
-<body id="topo" class="page-template page-template-page-builder page-template-page-builder-php page page-id-3562">
+<body id="topo" <?php body_class(); ?> >
+<body class="page-template page-template-page-builder page-template-page-builder-php page page-id-3562">
 
   <div class="overlay" id="js-overlay"></div>
 
@@ -200,7 +199,7 @@
         class="hero__container container w-screen h-screen flex items-end md:items-start lg:items-end md:pt-40 lg:pt-0 pb-10 md:pb-20">
         <div class="hero__content lg:w-5/12 text-white text-center relative z-10 js-hero-content">
           <h1 class="big-title text-balance">
-            <span class="ajuste-título">Hélio Amado<br></span>
+            Hélio Amado<br>
             <span class="ajuste-linha">Consultores Associados</span>
           </h1>
           <p class="mt-5 md:mt-7 text-balance">Fomos criados para apoiar pequenas e médias empresas com soluções estratégicas acessíveis e humanizadas. </p>
@@ -533,11 +532,15 @@
         <div class="lg:w-1/2">
           <h3 class="text-lg opacity-60">Legal</h3>
           <ul class="space-y-3 mt-3 pl-1">
+            <?php
+              $privacy_url = get_permalink( get_page_by_path( 'politica-de-privacidade' ) );
+              $terms_url   = get_permalink( get_page_by_path( 'termos-de-uso' ) );
+            ?>
             <li>
-              <a href="privacy-notice.html" target="_blank" class="text-lg text-white leading-snug">Política de Privacidade</a>
+              <a href="<?php echo esc_url( $privacy_url ); ?>" target="_blank" class="text-lg text-white leading-snug">Política de Privacidade</a>
             </li>
             <li>
-              <a href="terms-of-use.html" target="_blank" class="text-lg text-white leading-snug">Termos de Uso</a>
+              <a href="<?php echo esc_url( $terms_url ); ?>" target="_blank" class="text-lg text-white leading-snug">Termos de Uso</a>
             </li>
           </ul>
         </div>
@@ -581,7 +584,7 @@
     src="https://www.dsgco.com/wp-content/themes/dsg/assets/search-list-api.js?ver=2025071100" id="search-script-js">
   </script>
   <script defer src="/js/custom-footer.js"></script>
-  <script>
+    <script>
   document.querySelectorAll('.header__nav a').forEach(function(link) {
     link.addEventListener('click', function() {
       // Fecha o menu removendo a classe 'is-open' do header
@@ -589,5 +592,6 @@
     });
   });
 </script>
+  <?php wp_footer(); ?>
 </body>
 </html>
